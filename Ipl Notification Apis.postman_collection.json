@@ -1,0 +1,997 @@
+{
+	"info": {
+		"_postman_id": "0fe5f9b6-43e7-482b-afaf-f18c1bf236f2",
+		"name": "Ipl Notification Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24648504"
+	},
+	"item": [
+		{
+			"name": "Auth Collections",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Login Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"tony452261\",\r\n    \"password\": \"password123\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/admin/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Error Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"user4561\",\r\n    \"password\": \"password123\"\r\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/admin/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"admin",
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "33"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"21-dBEoW0UmTF+EGUMaprEp9/8zNNA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Mar 2024 11:20:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Invalid credentials\"\n}"
+								},
+								{
+									"name": "Success Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"tony452261\",\r\n    \"password\": \"password123\"\r\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/admin/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"admin",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "192"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"c0-olsz4PT0cQNg4fcxCe6amjCcA+E\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Mar 2024 11:20:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZDk3NGRiNzNkNTVmMTg3NGE0MjU2IiwiaXNBZG1pbiI6dHJ1ZX0sImlhdCI6MTcxMDA2OTYzOH0.2UUtNl54gMK4C0HJd7s-1-9j3CeemLcKhyljf607Rww\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Register Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"tony452261\",\r\n    \"email\": \"johan2@example.com\",\r\n    \"fullName\":\"Tony Stark\",\r\n    \"phoneNumber\":\"+919844740854\",\r\n    \"password\": \"password123\",\r\n    \"confirmPassword\": \"password123\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/admin/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success Repsone",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"tony452261\",\r\n    \"email\": \"johan2@example.com\",\r\n    \"fullName\":\"Tony Stark\",\r\n    \"phoneNumber\":\"+919844740854\",\r\n    \"password\": \"password123\",\r\n    \"confirmPassword\": \"password123\"\r\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/admin/register",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"admin",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "192"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"c0-VXprEMqZTVKBLG6lXGwfvDYiv4Y\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Mar 2024 11:19:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZDk3NGRiNzNkNTVmMTg3NGE0MjU2IiwiaXNBZG1pbiI6dHJ1ZX0sImlhdCI6MTcxMDA2OTU4MX0.aG6NVAiBPOmnWkgGGN2y14J1gIZIUrMEzMETFFC8044\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"user456\",\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"password123\",\r\n    \"confirmPassword\": \"password123\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"user456\",\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"password123\",\r\n    \"confirmPassword\": \"password123\"\r\n  }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/user/register",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"user",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "172"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ac-Vls0siTYMwx5Lx8/MYWGCBz9Hhk\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Mar 2024 11:21:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZDk3YTViNzNkNTVmMTg3NGE0MjVhIn0sImlhdCI6MTcxMDA2OTY3MH0.s5Dc5IGScTx-Le5h-ep4oiPliDSvf3aguS1APsjJ2co\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Login User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"user456\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"user456\",\r\n    \"password\": \"password123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/user/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "172"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ac-2q7iYj3qwWxGZvB3XEulOQvuFvE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Mar 2024 11:21:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZDk3YTViNzNkNTVmMTg3NGE0MjVhIn0sImlhdCI6MTcxMDA2OTY4M30.SwrJ72qluzqa62JyZHw-G-I0nbh88op9u9f3fc2m60k\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Logout User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"user456\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"user456\",\r\n    \"password\": \"password123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/auth/user/logout",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"auth",
+												"user",
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "31"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f-vYmtThEV0qgPmOaoi5WLoJuDA80\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 10 Mar 2024 10:30:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Logout successful\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscription Collections",
+			"item": [
+				{
+					"name": "Subscribe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{User Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/subscribe/65ed800c12e3895f7621417b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subscribe",
+								"65ed800c12e3895f7621417b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User is already subscribed to this team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVlZDgzZjE3ZTAxZmM2YWM4N2JhZTIyIn0sImlhdCI6MTcxMDA2NTUzNn0.lLPmH0wqwzxQPR0FeWx0P4oOy2z4fQfQvHLFhblEZtY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/subscribe/65ed800c12e3895f7621417b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subscribe",
+										"65ed800c12e3895f7621417b"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-NcZXKf0pXxfG1ct4CeZkh4qnBd8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Mar 2024 10:28:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User is already subscribed to this team\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{User Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/subscribe/65ed800c12e3895f7621417b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subscribe",
+										"65ed800c12e3895f7621417b"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-2myeMP/HLhPaYlT8X2ymX20uZRw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Mar 2024 11:23:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized - No token provided\"\n}"
+						},
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{User Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/subscribe/65ed800c12e3895f7621417b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"subscribe",
+										"65ed800c12e3895f7621417b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-9/2glfFkdvOzSJ6xfcf71qfZ0ic\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Mar 2024 11:24:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully subscribed to the team\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Teams Collections",
+			"item": [
+				{
+					"name": "Add Team",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Admin Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Team A\",\r\n    \"captain\": \"Player1\",\r\n    \"coach\": \"Coach1\",\r\n    \"homeVenue\": \"Venue1\",\r\n    \"players\": [\r\n        \"Player1\",\r\n        \"Player2\",\r\n        \"Player3\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teams/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Admin Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Team A\",\r\n    \"captain\": \"Player1\",\r\n    \"coach\": \"Coach1\",\r\n    \"homeVenue\": \"Venue1\",\r\n    \"players\": [\r\n        \"Player1\",\r\n        \"Player2\",\r\n        \"Player3\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/teams/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"teams",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-qITVX5tNjzu4inkvRXCfU4vDjeU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Mar 2024 11:24:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"team\": {\n        \"name\": \"Team A\",\n        \"captain\": \"Player1\",\n        \"coach\": \"Coach1\",\n        \"homeVenue\": \"Venue1\",\n        \"players\": [\n            \"Player1\",\n            \"Player2\",\n            \"Player3\"\n        ],\n        \"_id\": \"65ed9884b73d55f1874a4265\",\n        \"createdByAdmin\": \"65ed974db73d55f1874a4256\",\n        \"createdAt\": \"2024-03-10T11:24:52.529Z\",\n        \"updatedAt\": \"2024-03-10T11:24:52.529Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Team",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Admin Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Team /\",\r\n    \"captain\": \"Player1\",\r\n    \"coach\": \"Coach1\",\r\n    \"homeVenue\": \"Venue1\",\r\n    \"players\": [\r\n        \"Player1\",\r\n        \"Player2\",\r\n        \"Player3\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/teams/65ed9884b73d55f1874a4265",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams",
+								"65ed9884b73d55f1874a4265"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Admin Token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Team /\",\r\n    \"captain\": \"Player1\",\r\n    \"coach\": \"Coach1\",\r\n    \"homeVenue\": \"Venue1\",\r\n    \"players\": [\r\n        \"Player1\",\r\n        \"Player2\",\r\n        \"Player3\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/teams/65ed9884b73d55f1874a4265",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"teams",
+										"65ed9884b73d55f1874a4265"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-RzuULOGGFpfQximBcJOPC8Ufx/U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Mar 2024 11:25:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"team\": {\n        \"_id\": \"65ed9884b73d55f1874a4265\",\n        \"name\": \"Team /\",\n        \"captain\": \"Player1\",\n        \"coach\": \"Coach1\",\n        \"homeVenue\": \"Venue1\",\n        \"players\": [\n            \"Player1\",\n            \"Player2\",\n            \"Player3\"\n        ],\n        \"createdByAdmin\": \"65ed974db73d55f1874a4256\",\n        \"createdAt\": \"2024-03-10T11:24:52.529Z\",\n        \"updatedAt\": \"2024-03-10T11:25:20.762Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

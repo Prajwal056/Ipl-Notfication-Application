@@ -1,0 +1,20 @@
+2024-03-10 14:46:22 error: E11000 duplicate key error collection: ipl.admins index: email_1 dup key: { email: "john@example.com" }
+2024-03-10 14:47:17 error: E11000 duplicate key error collection: ipl.admins index: email_1 dup key: { email: "john@example.com" }
+2024-03-10 14:47:33 error: E11000 duplicate key error collection: ipl.admins index: email_1 dup key: { email: "john@example.com" }
+2024-03-10 14:55:52 error: secretOrPrivateKey must have a value
+2024-03-10 14:56:33 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 14:56:46 error: secretOrPrivateKey must have a value
+2024-03-10 14:58:27 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 14:58:39 error: secretOrPrivateKey must have a value
+2024-03-10 14:59:43 error: secretOrPrivateKey must have a value
+2024-03-10 15:01:15 error: config is not defined
+2024-03-10 15:01:57 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:02:40 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:03:48 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:05:05 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:05:39 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:05:43 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:06:05 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 15:06:31 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony45261" }
+2024-03-10 16:48:44 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony452261" }
+2024-03-10 16:49:23 error: E11000 duplicate key error collection: ipl.admins index: username_1 dup key: { username: "tony452261" }

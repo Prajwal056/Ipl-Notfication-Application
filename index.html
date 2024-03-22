@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Notifications</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      #messages {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .message {
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        max-width: 80%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .message.server {
+        background-color: #d6e9c6;
+        color: #333;
+      }
+
+      .message.user {
+        background-color: #ebccd1;
+        color: #a94442;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>IPL Notifications</h1>
+      <div id="messages"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      socket.on("consoleLog", (message) => {
+        const messagesDiv = document.getElementById("messages");
+        const messagePara = document.createElement("div");
+        messagePara.textContent = message;
+        messagePara.classList.add("message", "server");
+        messagesDiv.appendChild(messagePara);
+      });
+
+      document
+        .getElementById("messageForm")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const input = document.getElementById("messageInput");
+          const message = input.value;
+          input.value = "";
+          const messagesDiv = document.getElementById("messages");
+          const messagePara = document.createElement("div");
+          messagePara.textContent = message;
+          messagePara.classList.add("message", "user");
+          messagesDiv.appendChild(messagePara);
+          socket.emit("clientMessage", message);
+        });
+    </script>
+  </body>
+</html>
